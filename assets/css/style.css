@@ -1,3 +1,42 @@
+nav ul{
+	background-color: #DAA520;
+	overflow: hidden;
+	color: white;
+	padding-left: 20px ;
+	text-align: center;
+	margin: 0;
+	transition: max-height 0.5s;
+	width: 1100px;
+	min-height: 100%;
+}
+
+nav ul li{
+	display: inline-block;
+	padding: 15px;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: inherit;
+}
+
+nav ul li:hover{
+	background-color: #B8860B;
+}
+
+.menu-icon{
+	width: 100%;
+	background: #005c48;
+	text-align: left;
+	box-sizing: border-box;
+	padding: 15px 10px;
+	cursor: pointer;
+	color: #fff;
+	display: none;
+	text-align: right;
+}
+
+
 body {
     font-family: 'Open Sans', sans-serif;
     background: url(../img/bgh.jpg);
@@ -43,6 +82,7 @@ header {
 	background: #fff;
 	box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.2);
 	min-height: 500px;
+	display:
 }
 
 .banner {
@@ -111,3 +151,32 @@ header {
 	position: relative;
 	top: 500px;
 }
+
+/*Sldie-Show*/
+
+.slider {
+	width: 1024px;
+	margin: 2em auto;
+	
+}
+
+.slider-wrapper {
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+
+.slide {
+	float: left;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 3s linear;
+}
+
+.slider-wrapper > .slide:first-child {
+	opacity: 1;
+}
+/*Slide-END*/
+

@@ -1,0 +1,12 @@
+.A{
+	border: 1px ;
+
+    margin-top: auto;
+	margin-left: auto;
+	margin-right:auto; 
+	margin-bottom:auto;
+	font-size: 22px;
+	font-family: tahoma;
+	background-color:#eeeff2;
+	float:left;
+}

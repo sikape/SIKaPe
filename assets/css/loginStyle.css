@@ -1,0 +1,81 @@
+body{
+  color: white;
+}
+h1{
+  font-size: 44px;
+  }
+.content{
+  font-size: 20px;
+  padding-left:100px;
+  padding-top: 150px;
+}
+.garis{
+  border-left-style: solid ;
+  border-left-width: 10px;
+  padding-left:  20px;
+  color: white;
+}
+.box{
+  width: 353px;
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  background-color: white;
+  margin-top: 1px;
+  margin-bottom: 10px;
+  border-top: 1px solid black;  
+}
+.fl {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.itpw {
+  width: 80%;
+  padding: 13px 10px;
+  margin: 8px 0px;
+  background-color: #dbdbdb;
+  border: 3px solid #dbdbdb;
+  color: #757575;
+  transition: all 0.7s;
+}
+
+.its {
+  width: 80%;
+  font-size: 19px;
+  color: #f5f5f5;
+  padding: 12px;
+  margin: 8px 0;
+  background-color: #004d40;
+  border: none;
+  transition: all 0.4s;
+}
+
+.itpw:focus {
+  border-bottom: 3px solid #004d40;
+  color: #004d40
+}
+
+.its:hover , .its:focus {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+@media screen and (max-width:900px) {
+  #login {
+    background-size: 100% 100%;
+  }
+
+  .its {
+    width: 100%;
+  }
+
+  .itpw {
+    font-size: 14px;
+    width: 90%;
+    padding: 13px 3%;
+  }
+  .gem{
+    width: 200px;
+  }
