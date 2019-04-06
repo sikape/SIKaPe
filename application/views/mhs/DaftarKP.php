@@ -115,9 +115,9 @@
               <div class="list-group">
                 <ul style="list-style-type: none;">
                   <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/profile" style="color: #555; text-decoration: none; display: block;">Profile</a></li>
-                  <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/daftar" style="color: #555; text-decoration: none; display: block;">Daftar KP</a></li>
-                  <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/seminar" style="color: #555; text-decoration: none; display: block;">Seminar</a></li>
-                  <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/cetakbukti_page/<?php echo $nim;?>" style="color: #555; text-decoration: none; display: block;">Cetak Surat KP</a></li>
+                  <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/daftar" style="color: #555; text-decoration: none; display: block;">Daftar Kerja Praktik</a></li>
+                  <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/seminar" style="color: #555; text-decoration: none; display: block;">Daftar Seminar Kerja Praktik</a></li>
+                  <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/cetakbukti_page/<?php echo $nim;?>" style="color: #555; text-decoration: none; display: block;">Cetak Surat</a></li>
                   <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/logout" style="color: #555; text-decoration: none; display: block;">Logout</a></li>
                 </ul>
               </div>
@@ -128,25 +128,58 @@
         <div class="row">
           <form class="form" method="post" action="<?=base_url()?>index.php/KP/submit_daftar" style="margin-top: 20px;">
           <div class="form-group">
-            <label for="Nama">Nama anda:</label>
-            <input name ="Nama" type="text" class="form-control">
+            <label for="Nama">Nama Lengkap :</label>
+            <input name ="Nama" type="text" class="form-control" required="">
           </div>
           <div class="form-group">
-            <label for="Email">Email anda:</label>
-            <input name = "Email" type="text" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="No_handphone">No handphone:</label>
-            <input name = "No_handphone" type="text" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="Nim">Nim :</label>
-            <input name = "Nim" type="text" class="form-control">
+            <label for="Nim">NIM :</label>
+            <input name = "Nim" type="text" class="form-control" required="">
           </div>
            <div class="form-group">
-            <label for="Prodi">Prodi(kode prodi) :</label>
-            <input name = "Prodi" type="text" class="form-control">
+            <label for="Prodi">Program Studi :</label>
+            <input name = "Prodi" type="text" class="form-control" required="">
           </div>
+          <div class="form-group">
+            <label for="Alamat_lengkap">Alamat Lengkap :</label>
+            <textarea name = "Alamat_lengkap" type="text" class="form-control" rows="3" required=""></textarea> 
+          </div>
+          <div class="form-group">
+            <label for="No_handphone">No. Handphone :</label>
+            <input name = "No_handphone" type="number" class="form-control" required="">
+          </div>
+          <div class="form-group">
+            <label for="Email">Email :</label>
+            <input name = "Email" type="emai" placeholder="name@example.com" class="form-control" required="">
+          </div>
+          <div class="form-group">
+            <label for="Nama_instansi">Nama Instansi :</label>
+            <input name = "Nama_instansi" type="text" class="form-control" required="">
+          </div>
+          <div class="form-group">
+            <label for="Alamat_instansi">Alamat Instansi :</label>
+            <textarea name = "Alamat_instansi" type="text" class="form-control" rows="3" required=""></textarea> 
+          </div>
+          <div class="form-group">
+            <label for="No_instansi">No. Telp Instansi :</label>
+            <input name = "No_instansi" type="number" class="form-control" required="">
+          </div>
+          <div class="form-group">
+            <label for="Bidang">Bidang :</label>
+            <input name = "Bidang" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="Posisi">Posisi :</label>
+            <input name = "Posisi" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="Waktu_pelaksanaan">Waktu Pelaksanaan :</label>
+            <input name = "Waktu_pelaksanaan" type="date" class="form-control" required="">
+          </div>
+          <div class="form-group">
+            <label for="Transkrip">Transkrip :</label>
+            <input name = "Transkrip" type="file" class="form-control-file" required="">
+          </div>
+          
           
           <button type="submit" class="btn btn-info btn-lg"s style="background-color: #DAA520; color:white;">Submit</button>
           <?php
@@ -176,7 +209,7 @@
     <div class="container footer">
       <div class="row">
         <div class="col-sm-12">
-          <p class="text-center">&copy; Copyright 2019.</p>
+          <p class="text-center">&copy; Copyright 2019. SiKaPe</p>
         </div>
       </div>
     </div>
