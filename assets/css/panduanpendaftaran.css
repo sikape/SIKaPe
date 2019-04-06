@@ -1,0 +1,40 @@
+* { 
+	font-weight: 300;
+	transition: all .1s ease; 
+}
+
+.page-section {
+		width: 50%;
+		margin-left: 35%;
+		margin-top: 5%;
+		padding: 3em;
+    	background: #fff;
+		color: black;
+		border: 5px solid #daa520;
+		box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.5);
+}
+
+.navigation {
+  	
+	width: 30%;
+	margin-left: 2%;
+  	background-color: #daa520;
+  	color: white;
+	
+  	&__link {
+			display: block;
+    	color: #ddd; 
+    	text-decoration: none;
+    	padding: 1em;
+			font-weight: 400;
+			
+			&:hover {
+				background-color: #aaa;
+			}
+		
+		   &.active {
+		   	color: white;
+				 background-color: rgba(0,0,0,0.1);
+		   }
+  	}
+}
