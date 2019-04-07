@@ -9,11 +9,8 @@
 
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/style.css">
-<<<<<<< HEAD
-=======
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/panduanpendaftaran.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css'>
->>>>>>> 5c729462e49fb29c50369beb88a16f169617a769
 
     <!-- Bootstrap -->
     <link href="<?=base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -113,21 +110,9 @@
     </div>
     </div>
 
-<<<<<<< HEAD
-      <div class="container">
-      <div class="row content"> 
-        <h3>PANDUAN PENDAFTARAN</h3>
-        <ul>
-          <li>Login</li>
-          <li>Input Data</li>
-          <li>Cetak</li>
-        </ul>
-      </div>
-      </div>
-=======
     <div class="container">
       <div class="row content">
-        <p style="font-size: 24px; margin: 1cm"><b>Panduan Pendaftaran</b></p>
+        <p style="font-size: 24px; margin: 1cm"><b>PANDUAN PENDAFTARAN</b></p>
   
         <figure class="wp-block-image">
           <img src="<?=base_url()?>/assets/img/Flowchart-KP.jpg" alt class="wp-image-525" srcset="<?=base_url()?>/assets/img/Flowchart-KP.jpg 3508w, <?=base_url()?>/assets/img/Flowchart-KP.jpg 300w, <?=base_url()?>/assets/img/Flowchart-KP.jpg 768w, <?=base_url()?>/assets/img/Flowchart-KP.jpg" sizes="(max-width: 3508px) 100vw, 3508px" style="vertical-align: middle; max-width: 100%; border: 0;" >
@@ -223,7 +208,6 @@
         </div>
     </div>
   </div>
->>>>>>> 5c729462e49fb29c50369beb88a16f169617a769
 
     <div class="container footer">
       <div class="row">
@@ -239,9 +223,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
-<<<<<<< HEAD
-=======
     <script src="js/jumpmenu.js"></script>
->>>>>>> 5c729462e49fb29c50369beb88a16f169617a769
   </body>
 </html>
