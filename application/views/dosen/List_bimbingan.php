@@ -7,8 +7,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>KP | INSTITUT TEKNOLOGI SUMATERA</title>
 
-	    <!-- Custom Stylesheet -->
-	    <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/afterlogin.css">
+      <!-- Custom Stylesheet -->
+      <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/afterlogin.css">
 
     <!-- Bootstrap -->
     <link href="<?=base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -46,14 +46,6 @@
         <div class="col-sm-6">
           <div class="row">
             <div class="col-sm-12">
-              <form class="searchForm">
-                <input type="text" class="text-cari" placeholder="keyword..">
-                <button class="button-cari" type="submit">Cari</button>
-              </form>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
               <p class="text-right" style="margin-top: 10px;">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
@@ -89,7 +81,7 @@
       <li><a href="<?=base_url()?>index.php/KP/dashboard">Home</a></li>
       <li><a href="#">Persyaratan</a></li>
       <li><a href="#">Panduan Pendaftaran</a></li>
-	    <li><a href="#">Pengumuman</a></li>
+      <li><a href="#">Pengumuman</a></li>
       <li>Hi! <?php echo $nama; ?></li>
     </ul>
     </nav>
@@ -126,18 +118,18 @@
         <div class="row">
          <table border="1" class="col-sm-12">
            <h3 style="text-align: left;">List Bimbingan : </h3>
-         	  <tr style="background: gray;">
-         		<th style="text-align: center;">Nama</th>
-         		<th style="text-align: center;">Nim</th>
-         		<th style="text-align: center;">Prodi</th>
-         	</tr>
-         	<?php foreach ($data as $value) {?>
-         	<tr>
-         		<td style="text-align: center;"><?php echo '<a href="'.base_url().'index.php/KP/getDataBimbingan/'.$value['nim'].'" style="color:#555; text-decoration:none; display:block;">'.$value['nama'].'</a>';?></td>
-         		<td style="text-align: center;"><?php echo $value['nim'];?></td>
-         		<td style="text-align: center;"><?php echo $value['prodi'];?></td>
-         	</tr>
-         	<?php }?>
+            <tr style="background: gray;">
+            <th style="text-align: center;">Nama</th>
+            <th style="text-align: center;">Nim</th>
+            <th style="text-align: center;">Prodi</th>
+          </tr>
+          <?php foreach ($data as $value) {?>
+          <tr>
+            <td style="text-align: center;"><?php echo '<a href="'.base_url().'index.php/KP/getDataBimbingan/'.$value['nim'].'" style="color:#555; text-decoration:none; display:block;">'.$value['nama'].'</a>';?></td>
+            <td style="text-align: center;"><?php echo $value['nim'];?></td>
+            <td style="text-align: center;"><?php echo $value['prodi'];?></td>
+          </tr>
+          <?php }?>
          </table> 
          </div>
           <div class="row" style="margin-top: 10px;">
@@ -157,7 +149,7 @@
     <div class="container footer">
       <div class="row">
         <div class="col-sm-12">
-          <p class="text-center">&copy; Copyright 2019.</p>
+          <p class="text-center">&copy; Copyright 2019. SiKaPe</p>
         </div>
       </div>
     </div>

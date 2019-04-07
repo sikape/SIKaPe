@@ -7,8 +7,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>KP | INSTITUT TEKNOLOGI SUMATERA</title>
 
-	    <!-- Custom Stylesheet -->
-	    <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/afterlogin.css">
+      <!-- Custom Stylesheet -->
+      <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/afterlogin.css">
 
     <!-- Bootstrap -->
     <link href="<?=base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -46,14 +46,6 @@
         <div class="col-sm-6">
           <div class="row">
             <div class="col-sm-12">
-              <form class="searchForm">
-                <input type="text" class="text-cari" placeholder="keyword..">
-                <button class="button-cari" type="submit">Cari</button>
-              </form>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
               <p class="text-right" style="margin-top: 10px;">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
@@ -89,7 +81,7 @@
       <li><a href="<?=base_url()?>index.php/KP/dashboard">Home</a></li>
       <li><a href="#">Persyaratan</a></li>
       <li><a href="#">Panduan Pendaftaran</a></li>
-	    <li><a href="#">Pengumuman</a></li>
+      <li><a href="#">Pengumuman</a></li>
       <li>Hi! <?php echo $nama; ?></li>
     </ul>
     </nav>
