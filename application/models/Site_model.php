@@ -22,6 +22,11 @@ public function __construct()
 		$res=$this->db->insert($tablename,$data);
 		return $res;
 	}
+	public function update_daftarkp($id_pendaftarankp, $data){
+		$data['status'] = '1';
+		$kondisi = array('status' => $data['status']);
+		$query = $this->db->where('id_pendaftarankp',$id_pendaftarankp)->update('daftar_kp',$kondisi);
+	}
 	public function getDataStaff($username){
 		return $data = $this->db->select("*")
 		->from("tbl_staff")
