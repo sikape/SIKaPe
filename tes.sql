@@ -21,6 +21,38 @@ SET time_zone = "+00:00";
 --
 -- Database: `tes`
 --
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `daftar_kp`
+--
+
+CREATE TABLE `daftar_kp` (
+  `id_pendaftarankp` int(10) NOT NULL,
+  `nama_lengkap` varchar(100) NOT NULL,
+  `nim` char(8) NOT NULL,
+  `prodi` varchar(50) NOT NULL,
+  `alamat` varchar(100) NOT NULL,
+  `no_hp` varchar(15) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `nama_instansi` varchar(100) NOT NULL,
+  `alamat_instansi` varchar(100) NOT NULL,
+  `telp_instansi` varchar(15) NOT NULL,
+  `bidang` set('-Pilih-','Software Engineer','Game Developer','System Analyst dan System Integrator','Konsultan IT','Database Engineer / Database Administrator','Web Engineer / Web Administrator','Programmer','Intelligent System Developer','Other') NOT NULL,
+  `posisi` set('-Pilih-','Front End Developer','Back End Developer','Data Analyst','Data Scientist','Quality Assurance','UI/UX Designer','Other') NOT NULL,
+  `transkrip` mediumblob NOT NULL,
+  `waktu` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `daftar_kp`
+--
+ALTER TABLE `daftar_kp`
+  ADD PRIMARY KEY (`id_pendaftarankp`);
 
 -- --------------------------------------------------------
 
