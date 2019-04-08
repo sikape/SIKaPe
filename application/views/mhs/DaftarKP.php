@@ -157,11 +157,31 @@
           </div>
           <div class="form-group">
             <label for="Bidang">Bidang :</label>
-            <input name = "Bidang" type="text" class="form-control">
+            <select name = "Bidang" type="text" class="form-control">
+							<option value="-Pilih-">-Pilih-</option>
+              <option value="Software Engineer">Software Engineer</option>
+              <option value="Game Developer">Game Developer</option>
+              <option value="System Analyst dan System Integrator">System Analyst dan System Integrator</option>
+              <option value="Konsultan IT">Konsultan IT</option>
+              <option value="Database Engineer / Database Administrator">Database Engineer / Database Administrator</option>
+              <option value="Web Engineer / Web Administrator">Web Engineer / Web Administrator</option>
+              <option value="Programmer">Programmer</option>
+              <option value="Intelligent System Developer">Intelligent System Developer</option>
+              <option value="Other">Other</option>
+            </select>
           </div>
           <div class="form-group">
             <label for="Posisi">Posisi :</label>
-            <input name = "Posisi" type="text" class="form-control">
+            <select name = "Posisi" type="text" class="form-control">
+							<option value="-Pilih-">-Pilih-</option>
+              <option value="Front End Developer">Front End Developer</option>
+              <option value="Back End Developer">Back End Developer</option>
+              <option value="Data Analyst">Data Analyst</option>
+              <option value="Data Scientist">Data Scientist</option>
+              <option value="Quality Assurance">Quality Assurance</option>
+              <option value="UI/UX Designer">UI/UX Designer</option>
+              <option value="Other">Other</option>
+            </select>
           </div>
           <div class="form-group">
             <label for="Waktu_pelaksanaan">Waktu Pelaksanaan :</label>
@@ -171,7 +191,9 @@
             <label for="Transkrip">Transkrip :</label>
             <input name = "Transkrip" type="file" class="form-control-file" required="">
           </div>
-          
+          <div class="form-group">
+            <input name ="No_Pendaftaran_KP" type="hidden" class="form-control" required="">
+          </div>
           
           <button type="submit" class="btn btn-info btn-lg"s style="background-color: #DAA520; color:white;">Submit</button>
           <?php
