@@ -232,13 +232,21 @@ class KP extends CI_Controller{
 	public function submit_daftar(){
 		extract($_POST);
 		$this->load->model('Site_model');
-		$tbl='tbl_daftarMhsKP';
+		$tbl='daftar_kp';
 		$value=array(
-			'nama' => $_POST['Nama'],
-			'email' => $_POST['Email'],
-			'handphone' => $_POST['No_handphone'],
+			'nama_lengkap' => $_POST['Nama'],
 			'nim' => $_POST['Nim'],
-			'prodi' => $_POST['Prodi']
+			'prodi' => $_POST['Prodi'],
+			'alamat' => $_POST['Alamat_lengkap'],
+			'no_hp' => $_POST['No_handphone'],
+			'email' => $_POST['Email'],
+			'nama_instansi' => $_POST['Nama_instansi'],
+			'alamat_instansi' => $_POST['Alamat_instansi'],
+			'telp_instansi' => $_POST['No_instansi'],
+			'bidang' => $_POST['Bidang'],
+			'posisi' => $_POST['Posisi'],
+			'waktu' => $_POST['Waktu_pelaksanaan'],
+			'transkrip' => $_POST['Transkrip']
 			);
 		$res=$this->Site_model->daftar($tbl,$value);
 		if($res>=1){
@@ -249,30 +257,13 @@ class KP extends CI_Controller{
 				'nim' => $this->session->userdata('nim'),
 				'res' => $res
 				);
+			echo '<script>alert("Pendaftaran Berhasil");</script>';
 			$this->load->view('mhs/DaftarKP',$data);
 		}
 		else{
-			$data=array(
-				'nama' => $this->session->userdata('nama'),
-			
-				'foto' => $this->session->userdata('foto'),
-				'res' => $res
-				);
+			echo '<script>alert("Pendaftaran Gagal");</script>';
 			$this->load->view('mhs/DaftarKP',$data);
 		}
-	}
-	public function getListPendaftar(){
-		$this->load->model('Site_model');
-		$query = $this->Site_model->getPendaftar()->result_array();
-		$data=array('data'=>$query,'foto'=>$this->session->userdata('foto'),'nama'=>$this->session->userdata('nama'));
-		$this->load->view('staff/List_pendaftar',$data);
-	}
-	public function getDataPendaftar($nim){
-		
-		$this->load->model('Site_model');
-		$query = $this->Site_model->getDataPendaftar($nim)->result_array();
-		$data=array('data'=>$query,'fotostaff'=>$this->session->userdata('foto'),'namastaff'=>$this->session->userdata('nama'));
-		$this->load->view('staff/Profile_pendaftar',$data);
 	}
 	public function getValidasiPendaftar($nim){
 		$this->load->model('Site_model');
