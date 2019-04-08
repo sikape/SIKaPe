@@ -77,7 +77,7 @@
         <nav>
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#panduan">Panduan Pendaftaran</a></li>
+          <li><a href="<?=base_url()?>index.php/KP/panduan">Panduan Pendaftaran</a></li>
           <li><a href="<?=base_url()?>index.php/KP/page_login">Login</a></li>
           </ul>
         </nav>
