@@ -57,7 +57,7 @@ nav ul li:hover{
 	padding: 20px;
 	background: #fff;
 	box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.2);
-	min-height: 1000px;
+	min-height: 1200px;
 }
 
 .banner {
@@ -102,7 +102,12 @@ nav ul li:hover{
 	padding: 5px;
 }
 
-
+hr.style1{
+	margin-top: 80px;
+	margin-left: 60px;
+	margin-right: 60px;
+	border-top: 3px solid #daa520;
+}
 
 .postMargin {
 	margin-bottom: 10px;
