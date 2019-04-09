@@ -88,6 +88,10 @@
     <div class="container" style="background:#daa520; height: 50px;">
     <nav>
     <ul>    
+    <div class="menu-icon">
+      <i class="fa fa-bars fa-2x"></i>
+    </div>
+    <ul>
    <?php 
       if($_SESSION['logged_in']!=1){
         echo  "<li><a href='page_login'>Login</a></li>";   

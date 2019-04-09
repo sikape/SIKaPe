@@ -8,10 +8,10 @@
     <title>Sistem Informasi KP</title>
 
     <!-- Custom Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/home.css">
+    <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/list_pendaftar.css">
 
     <!-- Bootstrap -->
-    <link href="<?=base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=base_url()?>/assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Social Icon Fonts -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -30,7 +30,7 @@
         <div class="container">
           <div class="row">
         <div class="col-sm-1">
-          <a href="#"><img src="<?=base_url()?>assets/img/logo.png" width="70px" style="margin-bottom: 10px"></a>
+          <a href="#"><img src="<?=base_url()?>/assets/img/logo.png" width="70px" style="margin-bottom: 10px"></a>
         </div>
         <div class="col-sm-5">
           <div class="row">
@@ -83,18 +83,10 @@
     <!-- Navigation -->
     <div class="container" style="background:#daa520; height: 50px;">
         <nav>
-
         <ul>
-          <?php 
-      if($_SESSION['logged_in']!=1){
-        echo  "<li><a href='page_login'>Login</a></li>";   
-      }else{
-        echo  "<li><a href='".base_url()."index.php/KP/page_login'>Hi! ".$_SESSION['nama']."</a></li>";
-      }
-      ?>
-      <li><a href="<?=base_url()?>index.php/KP/panduan">Panduan Pendaftaran</a></li>
-      <li><a href="<?=base_url()?>index.php/KP/index">Home</a></li>
-
+          <li><a href="#pengumuman">Hi!</a></li>
+          <li><a href="#panduan">Panduan Pendaftaran</a></li>
+          <li><a href="#home">Home</a></li>
           </ul>
         </nav>
      
@@ -103,74 +95,43 @@
     <div class="container">
       <div class="content">
 
-        <div class = "banner">
-          <img src="<?=base_url()?>assets/img/banner.jpg" >
-        </div>
-
         <div class = "left_content">
-          <h3>Informasi Magang</h3>
-          <div class="articleT">
-            <a href="#"><img src="<?=base_url()?>assets/img/bl.jpg"></a>
-            <h4>Judul Article</h4>
-          </div>
-
-          <div class="articleT">
-            <a href="#"><img src="<?=base_url()?>assets/img/bl.jpg" ></a>
-            <h4>Judul Article</h4>
-          </div>
-
-          <div class="articleD">
-            <a href="#"><img src="<?=base_url()?>assets/img/tp.jpg" ></a>
-            <h4>Judul Article</h4>
-          </div>
-
-          <div class="articleD">
-            <a href="#"><img src="<?=base_url()?>assets/img/tp.jpg" ></a>
-            <h4>Judul Article</h4>
-          </div>
+        <img src="<?=base_url()?>/assets/img/people.png">
+          <ul>
+            <li class="list-group-item"><a href="<?=base_url()?>">Profil</li>
+            <li class="list-group-item"><a href="<?=base_url()?>">List Pendaftar KP</li>
+            <li class="list-group-item"><a href="<?=base_url()?>">Logout</li>
+          </ul>        
         
         </div>
 
-        <div class = "right_content">          
-          <h3>Jadwal Seminar KP</h3>
-          <table class="table1">
-          <tr>
-            <th width="70px">Nama</th>
-            <th width="50px">Jenis Seminar</th>
-            <th width="50px">Waktu</th>
-            <th>Ruang</th>
-            <th>Pembimbing</th>
-          </tr>
-
-          <tr>
-            <th>Nur Ali Majid</th>
-            <th>KP</th>
-            <th>17-05-2019/13.00</th>
-            <th>D212</th>
-            <th>I Wayan Wiprayoga W, S,Kom.,M.Kom</th>
-          </tr>
-
-          <tr>
-            <th>Nur Ali Majid</th>
-            <th>KP</th>
-            <th>17-05-2019/13.00</th>
-            <th>D212</th>
-            <th>I Wayan Wiprayoga W, S,Kom.,M.Kom</th>
-          </tr>
-
-          <tr>
-            <th>Nur Ali Majid</th>
-            <th>KP</th>
-            <th>17-05-2019/13.00</th>
-            <th>D212</th>
-            <th>I Wayan Wiprayoga W, S,Kom.,M.Kom</th>
-          </tr>
-          </table>
-         
+        <div class = "right_content">  
+          <div class = "title1">
+            <p>List Pendaftar KP</p>
+          </div>
+          <div class = "art1">
+            <table class="table_mhs">
+              <thead>
+              <tr>
+                <th width="250px">Nama</th>
+                <th width="100px">NIM</th>
+                <th width="70px">Prodi</th>
+                <th width="150px">Dosen Pembimbing</th>
+              </tr>
+              </thead>
+            </table>            
+          </div>
+          <div class = "title2">
+            <p>Note :</p>
+          </div>
+          <div class = "art2">
+            <p>Jika anda klik nama mahasiswa, maka anda akan direct ke profil mahasiswa tersebut</p>
+          </div>        
+          
         </div>
-        
+
       </div>
-    </div>
+    </div>    
 
     <div class="container footer">
       <div class="row">

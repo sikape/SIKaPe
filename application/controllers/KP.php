@@ -219,7 +219,7 @@ class KP extends CI_Controller{
 							);
 						$this->session->set_userdata($dosen_login);
 					}
-					$this->load->view('dosen/Dosen_page',$data);
+					$this->load->view('dosen/Dosen_dashboard',$data);
 				}
 			}
 		}
