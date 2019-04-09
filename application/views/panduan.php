@@ -92,7 +92,6 @@
     </div>
     <ul>
       <li><a href="<?=base_url()?>index.php/KP/dashboard">Home</a></li>
-      <li><a href="<?=base_url()?>index.php/KP/persyaratan">Persyaratan</a></li>
       <li><a href="#">Panduan Pendaftaran</a></li>
 	  <li><a href="<?=base_url()?>index.php/KP/pengumuman">Pengumuman</a></li>
     
