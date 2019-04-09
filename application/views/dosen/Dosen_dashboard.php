@@ -85,8 +85,8 @@
         <nav>
         <ul>
           <li><a href="#pengumuman">Hi!</a></li>
-          <li><a href="#home">Home</a></li>
           <li><a href="#panduan">Panduan Pendaftaran</a></li>
+          <li><a href="#home">Home</a></li>
           </ul>
         </nav>
      
