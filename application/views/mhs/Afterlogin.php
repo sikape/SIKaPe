@@ -9,6 +9,8 @@
 
       <!-- Custom Stylesheet -->
       <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/afterlogin.css">
+      <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/home.css">
+
 
     <!-- Bootstrap -->
     <link href="<?=base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -78,11 +80,9 @@
       <i class="fa fa-bars fa-2x"></i>
     </div>
     <ul>
-      <li><a href="<?=base_url()?>index.php/KP/dashboard">Home</a></li>
-      <li><a href="<?=base_url()?>index.php/KP/persyaratan">Persyaratan</a></li>
-      <li><a href="<?=base_url()?>index.php/KP/panduan">Panduan Pendaftaran</a></li>
-      <li><a href="<?=base_url()?>index.php/KP/pengumuman">Pengumuman</a></li>
       <li>Hi! <?php echo $nama; ?></li>
+      <li><a href="<?=base_url()?>index.php/KP/panduan">Panduan Pendaftaran</a></li>
+      <li><a href="<?=base_url()?>index.php/KP/index">Home</a></li>
     </ul>
     </nav>
     </div>
@@ -127,8 +127,6 @@
                   }else{ '<h4>Jenis Kelamin : </h4>'.'<p>Perempuan</p>';}?>
               </li>
                <li class="list-group-item"><?php echo '<strong>Alamat : </strong>'.$alamat;?></li>
-               <li class="list-group-item"><?php echo '<strong>Kuliah Kerja Nyata : </strong>'.$kkn;?></li>
-               <li class="list-group-item"><?php echo '<strong>Kuliah Praktik : </strong>'.$kp;?></li>
                <div style="margin-top: 10px;" class="h4"> Note :</div>
                <li>-Jika anda belum menyelesaikan Kuliah Kerja Nyata, anda belum dapat Daftar KP</li>
            </ul>

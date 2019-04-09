@@ -9,7 +9,7 @@
 
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/panduanpendaftaran.css">
+    <<link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/home.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap -->
@@ -87,27 +87,19 @@
     <!-- Navigation -->
     <div class="container" style="background:#daa520; height: 50px;">
     <nav>
-    <div class="menu-icon">
-      <i class="fa fa-bars fa-2x"></i>
-    </div>
-    <ul>
-      <li><a href="<?=base_url()?>index.php/KP/dashboard">Home</a></li>
-      <li><a href="<?=base_url()?>index.php/KP/persyaratan">Persyaratan</a></li>
-      <li><a href="#">Panduan Pendaftaran</a></li>
-	  <li><a href="<?=base_url()?>index.php/KP/pengumuman">Pengumuman</a></li>
-    
+    <ul>    
    <?php 
       if($_SESSION['logged_in']!=1){
-        echo  "<li><a href='#loginn'>Login</a></li>";   
+        echo  "<li><a href='page_login'>Login</a></li>";   
       }else{
         echo  "<li><a href='".base_url()."index.php/KP/page_login'>Hi! ".$_SESSION['nama']."</a></li>";
       }
       ?>
+      <li><a href="<?=base_url()?>index.php/KP/panduan">Panduan Pendaftaran</a></li>
+      <li><a href="<?=base_url()?>index.php/KP/index">Home</a></li>
 
     </ul>
     </nav>
-    </div>
-    </div>
     </div>
 
     <div class="container">

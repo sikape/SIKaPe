@@ -76,9 +76,17 @@
     <div class="container" style="background:#daa520; height: 50px;">
         <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="<?=base_url()?>index.php/KP/panduan">Panduan Pendaftaran</a></li>
-          <li><a href="<?=base_url()?>index.php/KP/page_login">Login</a></li>
+          <?php 
+      if($_SESSION['logged_in']!=1){
+        echo  "<li><a href='page_login'>Login</a></li>";   
+      }else{
+        echo  "<li><a href='".base_url()."index.php/KP/page_login'>Hi! ".$_SESSION['nama']."</a></li>";
+      }
+      ?>
+      <li><a href="<?=base_url()?>index.php/KP/panduan">Panduan Pendaftaran</a></li>
+      <li><a href="<?=base_url()?>index.php/KP/index">Home</a></li>
+
+
           </ul>
         </nav>
      
