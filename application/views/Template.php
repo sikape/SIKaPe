@@ -44,15 +44,6 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
-          <div class="row">
-            <div class="col-sm-12">
-              <form class="searchForm">
-                <input type="text" class="text-cari" placeholder="keyword..">
-                <button class="button-cari" type="submit">Cari</button>
-              </form>
-            </div>
-          </div>
           <div class="row">
             <div class="col-sm-12">
               <p class="text-right" style="margin-top: 10px;">
