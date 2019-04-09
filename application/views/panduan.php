@@ -15,7 +15,7 @@
     <!-- Bootstrap -->
     <link href="<?=base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- <link href="<?=base_url()?>assets/css/pengumuman.css" rel="stylesheet"> -->
+    <link href="<?=base_url()?>assets/css/panduanpendaftaran.css" rel="stylesheet">
 
 
     <!-- Social Icon Fonts -->
@@ -85,7 +85,7 @@
     <ul>
    <?php 
       if($_SESSION['logged_in']!=1){
-        echo  "<li><a href='page_login'>Login</a></li>";   
+        echo  "<li><a href='index.php/KP/page_login'>Login</a></li>";   
       }else{
         echo  "<li><a href='".base_url()."index.php/KP/page_login'>Hi! ".$_SESSION['nama']."</a></li>";
       }
