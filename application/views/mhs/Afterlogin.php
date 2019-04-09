@@ -100,7 +100,7 @@
       <div class="row">
         <div class="col-sm-3">
           <div class="row">
-          <img src="<?=base_url()?>assets/img/<?php echo $foto;?>" class="col-sm-12">
+          <img src="<?=base_url()?>assets/imgmhs/<?php echo $foto;?>" class="col-sm-12">
           </div>
           <div class="row" style="margin-top: 10px;">
             <div class="col-sm-12">
