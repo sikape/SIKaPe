@@ -47,6 +47,14 @@
         <div class="col-sm-6">
           <div class="row">
             <div class="col-sm-12">
+              <form class="searchForm">
+                <input type="text" class="text-cari" placeholder="keyword..">
+                <button class="button-cari" type="submit">Cari</button>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
               <p class="text-right" style="margin-top: 10px;">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
@@ -75,10 +83,10 @@
     <!-- Navigation -->
     <div class="container" style="background:#daa520; height: 50px;">
         <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
+        <ul>  
+          <li><a href="<?=base_url()?>index.php/KP/page_login">Login</a></li>        
           <li><a href="<?=base_url()?>index.php/KP/panduan">Panduan Pendaftaran</a></li>
-          <li><a href="<?=base_url()?>index.php/KP/page_login">Login</a></li>
+          <li><a href="<?=base_url()?>index.php">Home</a></li>
           </ul>
         </nav>
      
@@ -90,8 +98,6 @@
         <div class = "banner">
           <img src="<?=base_url()?>assets/img/banner.jpg" >
         </div>
-
-        <hr class="style1">
 
         <div class = "left_content">
           <h3>Informasi Magang</h3>
@@ -161,7 +167,7 @@
     <div class="container footer">
       <div class="row">
         <div class="col-sm-12">
-          <p class="text-center">&copy; Copyright 2019 - SiKaPe.</p>
+          <p class="text-center">&copy; Copyright 2019 - All rights reserved.</p>
         </div>
       </div>
     </div>
