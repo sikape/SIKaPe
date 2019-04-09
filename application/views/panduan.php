@@ -95,6 +95,7 @@
       <li><a href="<?=base_url()?>index.php/KP/persyaratan">Persyaratan</a></li>
       <li><a href="#">Panduan Pendaftaran</a></li>
 	  <li><a href="<?=base_url()?>index.php/KP/pengumuman">Pengumuman</a></li>
+    <li><a href="<?base_url()?>index.php/KP/Login">Login</a></li>
     
    <?php 
       if($_SESSION['logged_in']!=1){
