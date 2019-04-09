@@ -148,6 +148,12 @@ nav ul li:hover{
 	top: 500px;
 }
 
+hr.style1{
+	margin-top: 80px;
+	margin-left: 60px;
+	margin-right: 60px;
+	border-top: 3px solid #daa520;
+}
 .left_content{
 	height: 500px;
 	width: 52%;

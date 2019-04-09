@@ -98,6 +98,8 @@
           <img src="<?=base_url()?>assets/img/banner.jpg" >
         </div>
 
+        <hr class="style1">
+        
         <div class = "left_content">
           <h3>Informasi Magang</h3>
           <div class="articleT">
