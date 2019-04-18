@@ -373,6 +373,7 @@ class KP extends CI_Controller{
       public function panduan(){
         $this->load->view('panduan');
     }
+    
 }
 
 
