@@ -265,6 +265,12 @@ class KP extends CI_Controller{
 			$this->load->view('mhs/DaftarKP',$data);
 		}
 	}
+	public function getListPendaftar(){
+		$this->load->model('Site_model');
+		$query = $this->Site_model->getPendaftar()->result_array();
+		$data=array('data'=>$query,'foto'=>$this->session->userdata('foto'),'nama'=>$this->session->userdata('nama'));
+		$this->load->view('staff/List_pendaftar',$data);
+	}	
 	public function getValidasiPendaftar($nim){
 		$this->load->model('Site_model');
 		$query = $this->Site_model->getValidasiPendaftar($nim)->result_array();
