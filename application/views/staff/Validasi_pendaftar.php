@@ -187,7 +187,7 @@
                  <?php }
                  }?>
                <?php }?>
-               <li class="list-group-item"><?php echo '<strong>Bukti Pembayaran : </strong>';?> <img src="<?=base_url()?>assets/bukti_pembayaran/<?php echo $value['bukti_pembayaran']; ?>" height="100" width="100"></li>
+               <li class="list-group-item"><?php echo '<strong>Bukti Pembayaran : </strong>';?> <img src="<?=base_url()?>assets/Trash/aaaaa.JPG"  height="100" width="100"></li>
            </ul>
            
          </div>
