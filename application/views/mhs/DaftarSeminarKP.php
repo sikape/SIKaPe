@@ -56,9 +56,11 @@
             </div>
           </div>
         </div>
+
+
         <div class="col-sm-6">
         <div class="row">
-          <form class="form" method="post" action="<?=base_url()?>index.php/KP/submit_daftar" style="margin-top: 20px;">
+          <form class="form" method="post" action="<?=base_url()?>index.php/KP/submit_daftarseminarkp" style="margin-top: 20px;">
           <div class="form-group">
             <label for="Nama">Nama Lengkap :</label>
             <input name ="Nama" type="text" class="form-control" required="">
@@ -72,12 +74,8 @@
             <input name = "Prodi" type="text" class="form-control" required="">
           </div>
           <div class="form-group">
-            <label for="Alamat_lengkap">Alamat Lengkap :</label>
-            <textarea name = "Alamat_lengkap" type="text" class="form-control" rows="3" required=""></textarea> 
-          </div>
-          <div class="form-group">
-            <label for="No_handphone">No. Handphone :</label>
-            <input name = "No_handphone" class="form-control" required="">
+            <label for="Semester">Semester :</label>
+            <input name="Semester" type="text" class="form-control" required="">
           </div>
           <div class="form-group">
             <label for="Email">Email :</label>
@@ -98,7 +96,7 @@
           <div class="form-group">
             <label for="Bidang">Bidang :</label>
             <select name = "Bidang" type="text" class="form-control">
-							<option value="-Pilih-">-Pilih-</option>
+              <option value="-Pilih-">-Pilih-</option>
               <option value="Software Engineer">Software Engineer</option>
               <option value="Game Developer">Game Developer</option>
               <option value="System Analyst dan System Integrator">System Analyst dan System Integrator</option>
@@ -113,7 +111,7 @@
           <div class="form-group">
             <label for="Posisi">Posisi :</label>
             <select name = "Posisi" type="text" class="form-control">
-							<option value="-Pilih-">-Pilih-</option>
+              <option value="-Pilih-">-Pilih-</option>
               <option value="Front End Developer">Front End Developer</option>
               <option value="Back End Developer">Back End Developer</option>
               <option value="Data Analyst">Data Analyst</option>
@@ -126,13 +124,6 @@
           <div class="form-group">
             <label for="Waktu_pelaksanaan">Waktu Pelaksanaan :</label>
             <input name = "Waktu_pelaksanaan" type="date" class="form-control" required="">
-          </div>
-          <div class="form-group">
-            <label for="Transkrip">Transkrip :</label>
-            <input name = "Transkrip" type="file" class="form-control-file" required="">
-          </div>
-          <div class="form-group">
-            <input name ="No_Pendaftaran_KP" type="hidden" class="form-control" required="">
           </div>
           
           <button type="submit" class="btn btn-info btn-lg"s style="background-color: #DAA520; color:white;">Submit</button>
