@@ -125,13 +125,6 @@
             <label for="Waktu_pelaksanaan">Waktu Pelaksanaan :</label>
             <input name = "Waktu_pelaksanaan" type="date" class="form-control" required="">
           </div>
-          <div class="form-group">
-            <label for="Transkrip">Transkrip :</label>
-            <input name = "Transkrip" type="file" class="form-control-file" required="">
-          </div>
-          <div class="form-group">
-            <input name ="No_Pendaftaran_KP" type="hidden" class="form-control" required="">
-          </div>
           
           <button type="submit" class="btn btn-info btn-lg"s style="background-color: #DAA520; color:white;">Submit</button>
           <?php
