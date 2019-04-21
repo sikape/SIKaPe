@@ -7,8 +7,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>KP | INSTITUT TEKNOLOGI SUMATERA</title>
 
-	    <!-- Custom Stylesheet -->
-	    <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/afterlogin.css">
+      <!-- Custom Stylesheet -->
+      <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/afterlogin.css">
 
     <!-- Bootstrap -->
     <link href="<?=base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -81,7 +81,7 @@
       <li><a href="<?=base_url()?>index.php/KP/dashboard">Home</a></li>
       <li><a href="#">Persyaratan</a></li>
       <li><a href="#">Panduan Pendaftaran</a></li>
-	    <li><a href="#">Pengumuman</a></li>
+      <li><a href="#">Pengumuman</a></li>
       <li>Hi! <?php echo $namastaff; ?></li>
     </ul>
     </nav>
@@ -100,14 +100,14 @@
       <div class="row">
         <div class="col-sm-3">
           <div class="row">
-          <img src="<?=base_url()?>assets/imgstaff/<?php echo $fotostaff;?>" class="col-sm-12">
+          <img src="<?=base_url()?>assets/imgdosen/<?php echo $fotostaff;?>" class="col-sm-12">
           </div>
           <div class="row" style="margin-top: 10px;">
             <div class="col-sm-12">
                <div class="list-group">
                   <ul style="list-style-type: none;">
                    <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/profile" style="color: #555; text-decoration: none; display: block;">Profile</a></li>
-                   <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/getListPendaftar" style="color: #555; text-decoration: none; display: block;">List Pendaftar KP</a></li>
+                   <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/getListBimbingan" style="color: #555; text-decoration: none; display: block;">List Pendaftar KP</a></li>
                  <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/logout" style="color: #555; text-decoration: none; display: block;">Logout</a></li>
             </ul>
           </div>
@@ -116,8 +116,8 @@
         </div>
         
          <div class="col-sm-6">
-         	<h4 style="text-align: center;">Profile lengkap pendaftar : </h4>
-         	<div class="list-group">
+          <h4 style="text-align: center;">Profile lengkap pendaftar : </h4>
+          <div class="list-group">
            <ul style="list-style-type: none;">
            <?php foreach($data as $value){?>
              <li class="list-group-item"><?php echo '<strong>Nama : </strong>'.  $value['nama']; ?></li>
@@ -128,17 +128,69 @@
                   }else{ '<h4>Jenis Kelamin : </h4>'.'<p>Perempuan</p>';}?>
               </li>
                <li class="list-group-item"><?php echo '<strong>Alamat : </strong>'.$value['alamat'];?></li>
+               <?php if($button==0){
+                  if($res>=1){?>
+
                <li class="list-group-item"><?php echo '<strong>Kuliah Praktik : </strong>'.$value['kp'];?></li>
                <li class="list-group-item"><?php echo '<strong>Kuliah Kerja Nyata : </strong>'.$value['kkn'];?></li>
+               
+               <a href="<?=base_url()?>index.php/KP/ubahBimbingan/<?php echo $value['nim']; ?>" class="btn btn-default" style="margin-top: 10px;"> Ubah</a>
+               
+               <div class="alert">
+                 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                  <strong>Success message</strong>Data berhasil diubah
+                 </div>
+                  <?php }elseif($res==NULL){?>
+               <li class="list-group-item"><?php echo '<strong>Kuliah Praktik : </strong>'.$value['kp'];?></li>
+               <li class="list-group-item"><?php echo '<strong>Kuliah Kerja Nyata : </strong>'.$value['kkn'];?></li>
+              
+               <a href="<?=base_url()?>index.php/KP/ubahBimbingan/<?php echo $value['nim']; ?>" class="btn btn-default" style="margin-top: 10px;"> Ubah</a>
+               
+                 <?php }else{ ?>
+                 <li class="list-group-item"><?php echo '<strong>Kuliah Praktik : </strong>'.$value['kp'];?></li>
+               <li class="list-group-item"><?php echo '<strong>Kuliah Kerja Nyata : </strong>'.$value['kkn'];?></li>
+               
+               <a href="<?=base_url()?>index.php/KP/ubahBimbingan/<?php echo $value['nim']; ?>" class="btn btn-default" style="margin-top: 10px;"> Ubah</a>
+               
+               <div class="alert">
+                 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                  <strong>Error message</strong>Data gagal diubah
+                 </div>
+               <?php }?>
+               <?php }?>
+                <?php if($button==1){?>
+               <form method="post" action="<?=base_url()?>index.php/KP/UpdateValidasiBimbingan/<?php echo $value['nim']; ?>" class="form">
+               <li class="list-group-item">
+                 <STRONG>Kuliah Praktik : </STRONG>
+                 <label class="checkbox-inline"><input type="checkbox" value="sudah" name="kp">Sudah</label>
+                 <label class="checkbox-inline"><input type="checkbox" value="belum" name="kp">Belum</label>
+               </li>
+               <li class="list-group-item">
+                 <STRONG>Kuliah Kerja Nyata : </STRONG>
+                 <label class="checkbox-inline"><input type="checkbox" value="sudah" name="kkn">Sudah</label>
+                 <label class="checkbox-inline"><input type="checkbox" value="belum" name="kkn">Belum</label>
+               </li>
+               </li>
              
+               </li>
+               <button style ="margin-top: 10px;" class="btn btn-default" type="submit">Submit</button>
+               </form>
+               <?php }?>
+
                <?php }?>
            </ul>
+
          </div>
          </div>
          <div class="col-sm-3">
-             <ul style="list-style-type: none;  margin-top: 40px;">
-              <li class="list-group-item"><a style="text-decoration: none; display: block; color:gray;" href="<?=base_url()?>index.php/KP/getValidasiPendaftar/<?php echo $value['nim']?>">Lihat Validasi Pendaftar</a></li>
-             </ul>
+         <?php foreach($data as $value){ ?>
+            <a href="<?=base_url()?>index.php/KP/ValidasiBimbingan/<?php echo $value['nim'];?>" class="btn btn-default" style="margin-top: 10px;"> Validasi Mahasiswa</a>
+            <?php if($valid==1){?>
+            <h4>Mahasiswa sudah divalidasi</h4>
+            <?php }elseif($valid==2){?>
+            <h4>Mahasiswa gagal divalidasi</h4>
+            <?php }?>
+            <?php }?>
         </div>
       </div>
       </div>
