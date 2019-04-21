@@ -46,6 +46,14 @@
         <div class="col-sm-6">
           <div class="row">
             <div class="col-sm-12">
+              <form class="searchForm">
+                <input type="text" class="text-cari" placeholder="keyword..">
+                <button class="button-cari" type="submit">Cari</button>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
               <p class="text-right" style="margin-top: 10px;">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
@@ -78,9 +86,8 @@
       <i class="fa fa-bars fa-2x"></i>
     </div>
     <ul>
-      <li><a href="<?=base_url()?>index.php/KP/dashboard">Home</a></li>
-      <li><a href="#">Persyaratan</a></li>
-      <li><a href="#">Panduan Pendaftaran</a></li>
+      <li><a href="<?=base_url()?>index.php/KP/getListPendaftar">Home</a></li>
+      <li><a href="<?=base_url()?>index.php/KP/Panduan">Panduan Pendaftaran</a></li>
       <li><a href="#">Pengumuman</a></li>
       <li>Hi! <?php echo $namastaff; ?></li>
     </ul>
@@ -100,14 +107,14 @@
       <div class="row">
         <div class="col-sm-3">
           <div class="row">
-          <img src="<?=base_url()?>assets/imgdosen/<?php echo $fotostaff;?>" class="col-sm-12">
+          <img src="<?=base_url()?>assets/imgstaff/staff.JPEG" class="col-sm-12">
           </div>
           <div class="row" style="margin-top: 10px;">
             <div class="col-sm-12">
                <div class="list-group">
                   <ul style="list-style-type: none;">
                    <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/profile" style="color: #555; text-decoration: none; display: block;">Profile</a></li>
-                   <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/getListBimbingan" style="color: #555; text-decoration: none; display: block;">List Pendaftar KP</a></li>
+                   <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/getListPendaftar" style="color: #555; text-decoration: none; display: block;">List Pendaftar KP</a></li>
                  <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/logout" style="color: #555; text-decoration: none; display: block;">Logout</a></li>
             </ul>
           </div>
@@ -128,69 +135,17 @@
                   }else{ '<h4>Jenis Kelamin : </h4>'.'<p>Perempuan</p>';}?>
               </li>
                <li class="list-group-item"><?php echo '<strong>Alamat : </strong>'.$value['alamat'];?></li>
-               <?php if($button==0){
-                  if($res>=1){?>
-
                <li class="list-group-item"><?php echo '<strong>Kuliah Praktik : </strong>'.$value['kp'];?></li>
                <li class="list-group-item"><?php echo '<strong>Kuliah Kerja Nyata : </strong>'.$value['kkn'];?></li>
-               
-               <a href="<?=base_url()?>index.php/KP/ubahBimbingan/<?php echo $value['nim']; ?>" class="btn btn-default" style="margin-top: 10px;"> Ubah</a>
-               
-               <div class="alert">
-                 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-                  <strong>Success message</strong>Data berhasil diubah
-                 </div>
-                  <?php }elseif($res==NULL){?>
-               <li class="list-group-item"><?php echo '<strong>Kuliah Praktik : </strong>'.$value['kp'];?></li>
-               <li class="list-group-item"><?php echo '<strong>Kuliah Kerja Nyata : </strong>'.$value['kkn'];?></li>
-              
-               <a href="<?=base_url()?>index.php/KP/ubahBimbingan/<?php echo $value['nim']; ?>" class="btn btn-default" style="margin-top: 10px;"> Ubah</a>
-               
-                 <?php }else{ ?>
-                 <li class="list-group-item"><?php echo '<strong>Kuliah Praktik : </strong>'.$value['kp'];?></li>
-               <li class="list-group-item"><?php echo '<strong>Kuliah Kerja Nyata : </strong>'.$value['kkn'];?></li>
-               
-               <a href="<?=base_url()?>index.php/KP/ubahBimbingan/<?php echo $value['nim']; ?>" class="btn btn-default" style="margin-top: 10px;"> Ubah</a>
-               
-               <div class="alert">
-                 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-                  <strong>Error message</strong>Data gagal diubah
-                 </div>
-               <?php }?>
-               <?php }?>
-                <?php if($button==1){?>
-               <form method="post" action="<?=base_url()?>index.php/KP/UpdateValidasiBimbingan/<?php echo $value['nim']; ?>" class="form">
-               <li class="list-group-item">
-                 <STRONG>Kuliah Praktik : </STRONG>
-                 <label class="checkbox-inline"><input type="checkbox" value="sudah" name="kp">Sudah</label>
-                 <label class="checkbox-inline"><input type="checkbox" value="belum" name="kp">Belum</label>
-               </li>
-               <li class="list-group-item">
-                 <STRONG>Kuliah Kerja Nyata : </STRONG>
-                 <label class="checkbox-inline"><input type="checkbox" value="sudah" name="kkn">Sudah</label>
-                 <label class="checkbox-inline"><input type="checkbox" value="belum" name="kkn">Belum</label>
-               </li>
-               </li>
              
-               </li>
-               <button style ="margin-top: 10px;" class="btn btn-default" type="submit">Submit</button>
-               </form>
-               <?php }?>
-
                <?php }?>
            </ul>
-
          </div>
          </div>
          <div class="col-sm-3">
-         <?php foreach($data as $value){ ?>
-            <a href="<?=base_url()?>index.php/KP/ValidasiBimbingan/<?php echo $value['nim'];?>" class="btn btn-default" style="margin-top: 10px;"> Validasi Mahasiswa</a>
-            <?php if($valid==1){?>
-            <h4>Mahasiswa sudah divalidasi</h4>
-            <?php }elseif($valid==2){?>
-            <h4>Mahasiswa gagal divalidasi</h4>
-            <?php }?>
-            <?php }?>
+             <ul style="list-style-type: none;  margin-top: 40px;">
+              <li class="list-group-item"><a style="text-decoration: none; display: block; color:gray;" href="<?=base_url()?>index.php/KP/getValidasiPendaftar/<?php echo $value['nim']?>">Lihat Validasi Pendaftar</a></li>
+             </ul>
         </div>
       </div>
       </div>
@@ -199,7 +154,7 @@
     <div class="container footer">
       <div class="row">
         <div class="col-sm-12">
-          <p class="text-center">&copy; Copyright 2019. SiKaPe</p>
+          <p class="text-center">&copy; Copyright 2019</p>
         </div>
       </div>
     </div>
