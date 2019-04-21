@@ -103,6 +103,34 @@ class KP extends CI_Controller{
 				$this->load->view('Login');
 			}
 	}
+
+	public function daftar_seminar_kp(){
+		$check = $this->session->userdata('logged_in');
+		if($check==1){
+			if($this->session->userdata('type')=="mhs"){
+				$data['foto']=$this->session->userdata('foto');
+				$data['nama']=$this->session->userdata('nama');
+				$data['nim']=$this->session->userdata('nim');
+				$data['prodi']=$this->session->userdata('prodi');
+				
+				$data['kkn']=$this->session->userdata('kkn');
+				$data['kp']=$this->session->userdata('kp');
+				$data['res']=NULL;
+				$data['error']=NULL;
+				$data['msg']=NULL;
+				$tmp=NULL;
+				if($data['kkn']=="belum"){
+					$this->load->view('mhs/Daftarerror',$data);
+				}else{
+					$this->load->view('mhs/DaftarSeminarKP',$data);
+				}
+			}
+		}
+		else if($check==0){
+				$this->load->view('Login');
+			}
+	}
+
 	public function page_login(){
 		
 		$check = $this->session->userdata('logged_in');
@@ -265,6 +293,42 @@ class KP extends CI_Controller{
 			$this->load->view('mhs/DaftarKP',$data);
 		}
 	}
+
+	public function submit_daftarseminarkp(){
+		extract($_POST);
+		$this->load->model('Site_model');
+		$tbl='daftar_seminarkp';
+		$value=array(
+			'nama_lengkap' => $_POST['Nama'],
+			'nim' => $_POST['Nim'],
+			'prodi' => $_POST['Prodi'],
+			'semester' => $_POST['Semester'],
+			'email' => $_POST['Email'],
+			'nama_instansi' => $_POST['Nama_instansi'],
+			'alamat_instansi' => $_POST['Alamat_instansi'],
+			'telp_instansi' => $_POST['No_instansi'],
+			'bidang' => $_POST['Bidang'],
+			'posisi' => $_POST['Posisi'],
+			'waktu' => $_POST['Waktu_pelaksanaan'],
+			);
+		$res=$this->Site_model->daftar($tbl,$value);
+		if($res>=1){
+			$data=array(
+				'nama' => $this->session->userdata('nama'),
+				
+				'foto' => $this->session->userdata('foto'),
+				'nim' => $this->session->userdata('nim'),
+				'res' => $res
+				);
+			echo '<script>alert("Pendaftaran Berhasil");</script>';
+			$this->load->view('mhs/DaftarSeminarKP',$data);
+		}
+		else{
+			echo '<script>alert("Pendaftaran Gagal");</script>';
+			$this->load->view('mhs/DaftarSeminarKP',$data);
+		}
+	}
+
 	public function getListPendaftar(){
 		$this->load->model('Site_model');
 		$query = $this->Site_model->getPendaftar()->result_array();
@@ -380,13 +444,9 @@ class KP extends CI_Controller{
 	public function wisudapertama_page(){
 		$this->load->view('Wisuda_Pertama_ITERA');
 	}
-    public function persyaratan(){
-        $this->load->view('persyaratan');
-    }
-      public function panduan(){
-        $this->load->view('panduan');
+    public function panduan(){
+  	    $this->load->view('panduan');
     }
     
 }
-
 
