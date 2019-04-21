@@ -49,7 +49,7 @@
                   <ul style="list-style-type: none;">
                    <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/profile" style="color: #555; text-decoration: none; display: block;">Profile</a></li>
                    <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/daftar" style="color: #555; text-decoration: none; display: block;">Daftar Kerja Praktik</a></li>
-                  <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/validasi_pembayaran_page" style="color: #555; text-decoration: none; display: block;">Daftar Seminar Kerja Praktik</a></li>
+                  <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/daftar_seminar_kp" style="color: #555; text-decoration: none; display: block;">Daftar Seminar Kerja Praktik</a></li>
                    <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/cetakbukti_page/<?php echo $nim;?>" style="color: #555; text-decoration: none; display: block;">Cetak Surat</a></li>
                  <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/logout" style="color: #555; text-decoration: none; display: block;">Logout</a></li>
             </ul>

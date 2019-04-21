@@ -48,7 +48,7 @@
                 <ul style="list-style-type: none;">
                   <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/profile" style="color: #555; text-decoration: none; display: block;">Profile</a></li>
                   <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/daftar" style="color: #555; text-decoration: none; display: block;">Daftar Kerja Praktik</a></li>
-                  <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/seminar" style="color: #555; text-decoration: none; display: block;">Daftar Seminar Kerja Praktik</a></li>
+                  <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/daftar_seminar_kp" style="color: #555; text-decoration: none; display: block;">Daftar Seminar Kerja Praktik</a></li>
                   <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/cetakbukti_page/<?php echo $nim;?>" style="color: #555; text-decoration: none; display: block;">Cetak Surat</a></li>
                   <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/logout" style="color: #555; text-decoration: none; display: block;">Logout</a></li>
                 </ul>
@@ -81,7 +81,7 @@
           </div>
           <div class="form-group">
             <label for="Email">Email :</label>
-            <input name = "Email" type="emai" placeholder="name@example.com" class="form-control" required="">
+            <input name = "Email" type="email" placeholder="name@example.com" class="form-control" required="">
           </div>
           <div class="form-group">
             <label for="Nama_instansi">Nama Instansi :</label>
@@ -161,9 +161,8 @@
       </div>
     </div>
 
-      <!-- Footer -->
-
- <?php $this->load->view('footer'); ?>
+    <!-- Footer -->
+    <?php $this->load->view('footer'); ?>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
