@@ -5,7 +5,9 @@ class KP extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		$this->load->library('session');
-		$this->load->library('pdf');
+		$this->load->library('Pdf');
+		
+		$this->load->model('Site_model');
 		
 	}
 	public function index()
@@ -373,6 +375,16 @@ class KP extends CI_Controller{
       public function panduan(){
         $this->load->view('panduan');
     }
+
+  
+    public function cetakpdf($nim){
+    	$this->load->library('pdf');
+		$this->load->model('Site_model');
+	  	$value1 = $this->session->userdata();
+		$value2 = $this->Site_model->getDataPendaftaranKP($nim)->result_array();
+		$data = array('value1' => $value1,'value2'=>$value2 );
+	    $this->load->view('mhs/cetakpdf',$data,TRUE);
+        }
     
 }
 
