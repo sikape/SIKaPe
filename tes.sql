@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 28, 2019 at 11:33 AM
+-- Generation Time: Apr 21, 2019 at 06:48 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 5.6.40
 
@@ -21,6 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `tes`
 --
+
 -- --------------------------------------------------------
 
 --
@@ -44,15 +45,25 @@ CREATE TABLE `daftar_kp` (
   `waktu` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Indexes for dumped tables
---
+-- --------------------------------------------------------
 
 --
--- Indexes for table `daftar_kp`
+-- Table structure for table `daftar_seminarkp`
 --
-ALTER TABLE `daftar_kp`
-  ADD PRIMARY KEY (`id_pendaftarankp`);
+
+CREATE TABLE `daftar_seminarkp` (
+  `nama_lengkap` varchar(100) NOT NULL,
+  `nim` char(8) NOT NULL,
+  `prodi` varchar(50) NOT NULL,
+  `semester` int(1) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `nama_instansi` varchar(100) NOT NULL,
+  `alamat_instansi` varchar(100) NOT NULL,
+  `telp_instansi` varchar(50) NOT NULL,
+  `waktu` date NOT NULL,
+  `bidang` set('-Pilih-','Software Engineer','Game Developer','System Analyst dan System Integrator','Konsultan IT','Database Engineer / Database Administrator','Web Engineer / Web Administrator','Programmer','Intelligent System Developer','Other') NOT NULL,
+  `posisi` set('-Pilih-','Front End Developer','Back End Developer','Data Analyst','Data Scientist','Quality Assurance','UI/UX Designer','Other') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -129,9 +140,9 @@ CREATE TABLE `tbl_mhs` (
 --
 
 INSERT INTO `tbl_mhs` (`nim`, `prodi`, `username`, `nama`, `jenis_kelamin`, `telp`, `alamat`, `foto`, `id_dosenpembimbing`, `kp`, `kkn`) VALUES
-(14115019, 'IF', 'kurnia.14116001@student.itera.ac.id', 'kurnia', 'L', '082278301833', 'Kos FKPM', 'imgdosen.jpg', 18099919, 'sudah', 'sudah'),
+(14115019, 'IF', 'kurnia.14116001@student.itera.ac.id', 'kurnia', 'L', '082278301833', 'Kos FKPM', 'imgdosen.jpg', 18099919, '', ''),
 (14115021, 'IF', 'Ichsan.14116002@student.itera.ac.id', 'Ichsan', 'L', '082123339887', 'Kos. Pak Aji Squad', 'imgdosen.jpg', 18099919, 'sudah', 'belum'),
-(14115029, 'IF', 'tobi.1415029@student.itera.ac.id', 'Tobi Santoso', 'L', '081247594248', 'FKPM', 'a.png', 18099919, 'sudah', '');
+(14115029, 'IF', 'tobi.1415029@student.itera.ac.id', 'Tobi Santoso', 'L', '081247594248', 'FKPM', 'a.png', 18099919, 'sudah', 'sudah');
 
 -- --------------------------------------------------------
 
@@ -184,6 +195,12 @@ INSERT INTO `tbl_user` (`id`, `username`, `password`, `type`, `active`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `daftar_kp`
+--
+ALTER TABLE `daftar_kp`
+  ADD PRIMARY KEY (`id_pendaftarankp`);
 
 --
 -- Indexes for table `tbl_daftarMhsKP`

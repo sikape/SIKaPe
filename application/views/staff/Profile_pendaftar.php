@@ -7,8 +7,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>KP | INSTITUT TEKNOLOGI SUMATERA</title>
 
-	    <!-- Custom Stylesheet -->
-	    <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/afterlogin.css">
+      <!-- Custom Stylesheet -->
+      <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/afterlogin.css">
 
     <!-- Bootstrap -->
     <link href="<?=base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -46,6 +46,14 @@
         <div class="col-sm-6">
           <div class="row">
             <div class="col-sm-12">
+              <form class="searchForm">
+                <input type="text" class="text-cari" placeholder="keyword..">
+                <button class="button-cari" type="submit">Cari</button>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
               <p class="text-right" style="margin-top: 10px;">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
@@ -78,10 +86,9 @@
       <i class="fa fa-bars fa-2x"></i>
     </div>
     <ul>
-      <li><a href="<?=base_url()?>index.php/KP/dashboard">Home</a></li>
-      <li><a href="#">Persyaratan</a></li>
-      <li><a href="#">Panduan Pendaftaran</a></li>
-	    <li><a href="#">Pengumuman</a></li>
+      <li><a href="<?=base_url()?>index.php/KP/getListPendaftar">Home</a></li>
+      <li><a href="<?=base_url()?>index.php/KP/Panduan">Panduan Pendaftaran</a></li>
+      <li><a href="#">Pengumuman</a></li>
       <li>Hi! <?php echo $namastaff; ?></li>
     </ul>
     </nav>
@@ -100,7 +107,7 @@
       <div class="row">
         <div class="col-sm-3">
           <div class="row">
-          <img src="<?=base_url()?>assets/imgstaff/<?php echo $fotostaff;?>" class="col-sm-12">
+          <img src="<?=base_url()?>assets/imgstaff/staff.JPEG" class="col-sm-12">
           </div>
           <div class="row" style="margin-top: 10px;">
             <div class="col-sm-12">
@@ -116,8 +123,8 @@
         </div>
         
          <div class="col-sm-6">
-         	<h4 style="text-align: center;">Profile lengkap pendaftar : </h4>
-         	<div class="list-group">
+          <h4 style="text-align: center;">Profile lengkap pendaftar : </h4>
+          <div class="list-group">
            <ul style="list-style-type: none;">
            <?php foreach($data as $value){?>
              <li class="list-group-item"><?php echo '<strong>Nama : </strong>'.  $value['nama']; ?></li>
@@ -147,7 +154,7 @@
     <div class="container footer">
       <div class="row">
         <div class="col-sm-12">
-          <p class="text-center">&copy; Copyright 2019. SiKaPe</p>
+          <p class="text-center">&copy; Copyright 2019</p>
         </div>
       </div>
     </div>

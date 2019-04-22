@@ -95,7 +95,7 @@
       <div class="container">
       <div class="row content">
       <div class="row" style="font-family: times; font-size:20px; font-style: bold;">
-      <marquee>KP akan dilaksanakan pada tanggal 6 Oktober 2019</marquee> 
+      <marquee>Seminar KP akan dilaksanakan pada tanggal 6 Oktober 2019</marquee> 
       </div>
       <div class="row">
         <div class="col-sm-3">
@@ -108,7 +108,7 @@
                 <ul style="list-style-type: none;">
                   <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/profile" style="color: #555; text-decoration: none; display: block;">Profile</a></li>
                   <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/daftar" style="color: #555; text-decoration: none; display: block;">Daftar KP</a></li>
-                  <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/validasi_pembayaran_page" style="color: #555; text-decoration: none; display: block;">Seminar</a></li>
+                  <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/daftar_seminar_kp" style="color: #555; text-decoration: none; display: block;">DaftarSeminarKP</a></li>
                   <li class="list-group-item"><a href="#" style="color: #555; text-decoration: none; display: block;">Cetak Surat KP</a></li>
                   <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/logout" style="color: #555; text-decoration: none; display: block;">Logout</a></li>
                 </ul>
