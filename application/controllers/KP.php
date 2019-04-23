@@ -221,6 +221,7 @@ class KP extends CI_Controller{
 				}
 				elseif($user_login['type']=="staff"){
 					$query2 = $this->Site_model->getDataStaff($user_login['username'])->result_array();
+					if($query2){
 					foreach ($query2 as $key => $data) {
 						# code...
 						$staff_login=array(
@@ -233,7 +234,8 @@ class KP extends CI_Controller{
 							);
 						$this->session->set_userdata($staff_login);
 					}
-					$this->load->view('staff/Staff_page',$data);
+					$this->load->view('staff/Staff_page',$staff_login);
+			      	}
 				}
 				elseif($user_login['type']=="dosen"){
 					$query2 = $this->Site_model->getDataDosen($user_login['username'])->result_array();
