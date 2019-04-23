@@ -78,10 +78,10 @@
       <i class="fa fa-bars fa-2x"></i>
     </div>
     <ul>
-      <li><a href="<?=base_url()?>index.php/KP/dashboard">Home</a></li>
-      <li><a href="#">Persyaratan</a></li>
-      <li><a href="#">Panduan Pendaftaran</a></li>
-      <li><a href="#">Pengumuman</a></li>
+     <li><a href="<?=base_url()?>index.php/KP/getListPendaftar">Home</a></li>
+      <li><a href="<?=base_url()?>index.php/KP/Persyaratan">Persyaratan</a></li>
+      <li><a href="<?=base_url()?>index.php/KP/Panduan ?>">Panduan Pendaftaran</a></li>
+      <li><a href="<?=base_url()?>index.php/KP/Pengumuman">Pengumuman</a></li>
       <li>Hi! <?php echo $nama; ?></li>
     </ul>
     </nav>
