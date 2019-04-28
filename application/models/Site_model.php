@@ -74,4 +74,13 @@ public function __construct()
 		$res=$this->db->update('tbl_daftarMhsKP', $data);
 		return $res;
 	}
+
+	public function getDataPendaftaranKP($nim){
+
+		return $data = $this->db->select("*")
+		->from("daftar_kp")
+		->where("daftar_kp.nim",$nim)
+		->get();
+
+    }
 }

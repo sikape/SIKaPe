@@ -31,9 +31,9 @@
             <input class="itpw" type="text" name="username" placeholder="Email pengguna"><br>
             <input class="itpw" type="password" name="password" placeholder="Kata Sandi"><br>
             <input class="its" type="submit" name="login" value="LOGIN">
-            </div>
-          </div>
-          </div>
-          </div>
+        </div>
+  </div>
+  </div>
+  </div>
 </body>
 </html>

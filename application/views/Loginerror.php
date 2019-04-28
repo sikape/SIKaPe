@@ -5,38 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/loginerror.css">
+	<link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/loginStyle.css">
 	<link href="<?=base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
 	<script src="<?=base_url()?>assets/js/jquery-3.2.1.js"> </script>
 	<script  src="<?=base_url()?>assets/js/bootstrap.min.js"> </script>
 </head>
-<body style="background: url(<?=base_url()?>assets/img/terabg.jpg); background-size: 100%;">
-<div class="content">
-	<h1><strong>Single Sign On ITERA</strong></h1>
-	<br>Selamat Datang di Sistem Single Sign On ITERA.</br>
-	<br>Jangan memberikan akun login (nama pengguna dan kata sandi) anda pada siapapun.</br>
-	<br>keamanan data anda terletak pada diri ada sendiri.</br>
-	<h5>-Administrator</h5>
-</div>
-<div class="login">
-	<h1 class="title">Login</h1>
-	<form class="form" method="POST" action="<?=base_url()?>index.php/KP/login">
-
-      <p class="field">
-        <input type="text" name="username" placeholder="Email pengguna"/>
-        <i class="fa fa-user"></i>
-      </p>
-
-      <p class="field">
-        <input type="password" name="password" placeholder="Kata Sandi"/>
-        <i class="fa fa-lock"></i>
-      </p>
-    <button type="submit" class="Login">Login</button>
-    
-	<div class="alert">
-  	<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  	<strong>Username atau Password Salah!</strong> Silahkan diulangi kembali loginnya.
+<body style="background: url(<?=base_url()?>assets/img/bgg.jpg); background-size: 100%;">
+<div class="row">
+    <div class="col-lg-6" >
+      <div class="content">
+      <div class="garis" >
+    <h1><strong>Single Sign On ITERA</strong></h1>
+    <p">Selamat Datang di Sistem Single Sign On ITERA.</p>
+    <p>Jangan memberikan akun login (nama pengguna dan kata sandi) anda<br>pada siapapun.<br>
+    keamanan data anda terletak pada diri ada sendiri.</p>
+    <h5>-Administrator</h5>
+  </div>  
+    </div>
+    </div>
+   <div class="col-lg-6" >
+   <div class="content">
+   <div class="box">
+        <div class="gem"><img src="<?=base_url()?>/assets/img/gem.png"></div>
+        <form class="fl" action="<?=base_url()?>index.php/KP/login  " method="post">
+            <input class="itpw" type="text" name="username" placeholder="Email pengguna"><br>
+            <input class="itpw" type="password" name="password" placeholder="Kata Sandi"><br>
+            <input class="its" type="submit" name="login" value="LOGIN">
+        </div>
+  
+		<div class="alert">
+	  	<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+	  	<strong>Username atau Password Salah!</strong> Silahkan diulangi kembali loginnya.
+		</div>
+	    </form>
 	</div>
-    </form>
+  	</div>
+  	</div>
     
 
 </body>

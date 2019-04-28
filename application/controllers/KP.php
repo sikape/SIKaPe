@@ -5,7 +5,9 @@ class KP extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		$this->load->library('session');
-		$this->load->library('pdf');
+		$this->load->library('Pdf');
+		
+		$this->load->model('Site_model');
 		
 	}
 	public function index()
@@ -219,6 +221,7 @@ class KP extends CI_Controller{
 				}
 				elseif($user_login['type']=="staff"){
 					$query2 = $this->Site_model->getDataStaff($user_login['username'])->result_array();
+					if($query2){
 					foreach ($query2 as $key => $data) {
 						# code...
 						$staff_login=array(
@@ -231,7 +234,8 @@ class KP extends CI_Controller{
 							);
 						$this->session->set_userdata($staff_login);
 					}
-					$this->load->view('staff/Staff_page',$data);
+					$this->load->view('staff/Staff_page',$staff_login);
+			      	}
 				}
 				elseif($user_login['type']=="dosen"){
 					$query2 = $this->Site_model->getDataDosen($user_login['username'])->result_array();
@@ -447,6 +451,16 @@ class KP extends CI_Controller{
     public function panduan(){
   	    $this->load->view('panduan');
     }
+
+  
+    public function cetakpdf($nim){
+    	$this->load->library('pdf');
+		$this->load->model('Site_model');
+	  	$value1 = $this->session->userdata();
+		$value2 = $this->Site_model->getDataPendaftaranKP($nim)->result_array();
+		$data = array('value1' => $value1,'value2'=>$value2 );
+	    $this->load->view('mhs/cetakpdf',$data,TRUE);
+        }
     
 }
 

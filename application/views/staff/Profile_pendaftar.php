@@ -87,8 +87,9 @@
     </div>
     <ul>
       <li><a href="<?=base_url()?>index.php/KP/getListPendaftar">Home</a></li>
-      <li><a href="<?=base_url()?>index.php/KP/Panduan">Panduan Pendaftaran</a></li>
-      <li><a href="#">Pengumuman</a></li>
+      <li><a href="<?=base_url()?>index.php/KP/Persyaratan">Persyaratan</a></li>
+      <li><a href="<?=base_url()?>index.php/KP/Panduan ?>">Panduan Pendaftaran</a></li>
+      <li><a href="<?=base_url()?>index.php/KP/Pengumuman">Pengumuman</a></li>
       <li>Hi! <?php echo $namastaff; ?></li>
     </ul>
     </nav>

@@ -4,13 +4,16 @@ nav ul{
 	color: white;
 	padding-left: 20px ;
 	text-align: center;
-	margin: 0;
 	transition: max-height 0.5s;
 	width: 1100px;
 	min-height: 100%;
+	float: right;
 }
 
 nav ul li{
+
+	float: right;
+	margin-right: 30px;
 	display: inline-block;
 	padding: 15px;
 }
@@ -27,7 +30,7 @@ nav ul li:hover{
 .menu-icon{
 	width: 100%;
 	background: #005c48;
-	text-align: left;
+
 	box-sizing: border-box;
 	padding: 15px 10px;
 	cursor: pointer;
@@ -74,7 +77,7 @@ header {
     background: none;
     border:none;
     margin-bottom: 0px;
-	height: 30px;		
+	height: 30px;	
 }
 
 .content {
