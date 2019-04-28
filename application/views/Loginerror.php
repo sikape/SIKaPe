@@ -27,10 +27,10 @@
    <div class="content">
    <div class="box">
         <div class="gem"><img src="<?=base_url()?>/assets/img/gem.png"></div>
-        <form class="fl" action="<?=base_url()?>index.php/KP/login  " method="post">
+        <form class="fl" action="<?=base_url()?>KP/Login  " method="post">
             <input class="itpw" type="text" name="username" placeholder="Email pengguna"><br>
             <input class="itpw" type="password" name="password" placeholder="Kata Sandi"><br>
-            <input class="its" type="submit" name="login" value="LOGIN">
+            <input class="its" type="submit" name="login" value="Masuk">
         </div>
   
 		<div class="alert">
