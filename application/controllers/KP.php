@@ -196,7 +196,7 @@ class KP extends CI_Controller{
 					);
 				$this->session->set_userdata($user_login);
 			}
-			if($user_login['username']!=$_POST['username']||$user_login['password']!=$_POST['password']||$user_login['username'&&'password']==NULL){
+			if($user_login['username']!=$_POST['username']||$user_login['password']!=$_POST['password']){
 				$this->load->view('Loginerror');
 			}
 			else{
